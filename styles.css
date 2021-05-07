@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,200;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+}
+
+.showcase{
+    position: absolute;
+    right:0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.showcase.active{
+    position: absolute;
+    right: 300px;
+    width: 100vw;
+}
+
+
+.showcase header{
+    position:absolute;
+    top:0;
+    left:0;
+    padding: 40px 100px;
+    z-index:40;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+.logo{
+    cursor: pointer;
+}
+.toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image:url('https://i.ibb.co/HrfVRcx/menu.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    cursor: pointer;
+}
+
+.toggle.active{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image:url('https://i.ibb.co/rt3HybH/close.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    cursor: pointer;
+}
+
+.showcase video{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #537c61;
+    mix-blend-mode:overlay;
+}
+.desc{
+    position: relative;
+    z-index:50;
+}
+.desc a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 0.8em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top:15px;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+#explore:hover{
+    background-color: green;
+    color: white;
+    transform: scale(1.02) translateX(20px);
+    letter-spacing: 3px;
+}
+.desc h2{
+    font-size: 60px;
+}
+.desc h3{
+    font-size: 30px;
+}
+.scroll{
+    position: absolute;
+    left: 0;
+    bottom: 1.5em;
+    filter: invert();
+    cursor: pointer;
+    z-index: 400;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name:scrolldown;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+.scroll img{
+    width: 50px;
+}
+.menu{
+    display: none;
+    transition: 0.4s;
+}
+.menu.active{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul{
+    position:relative;
+    list-style:none;
+}
+.menu ul li{
+    padding: 15px 0 15px 0;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: 0.12s;
+}
+.menu ul li a:hover{
+    color: green;
+    transform: scale(1.25);
+}
+@keyframes scrolldown {
+    0%{
+        transform:translateY(-30px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+    
+}
